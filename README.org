@@ -1,0 +1,24 @@
+#+TITLE:   Basic Driver
+#+DATE:    October 29, 2019
+#+STARTUP: inlineimages
+
+* Table of Contents :TOC_3:noexport:
+- [[#description][Description]]
+- [[#prerequisites][Prerequisites]]
+- [[#configuration][Configuration]]
+
+* Description
+A basic driver made to learn how do drivers work....DO NOT USE IT
+
++ Memory management
+
+* Prerequisites
++ cmake
++ linux-headers
+
+* Configuration
+- insmod main.ko [for loading the module]
+- rmmod main [to remove the module]
+- lsmod [list modules]
+- dmesg [check out the kernel messages]
+

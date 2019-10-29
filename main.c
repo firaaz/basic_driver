@@ -55,8 +55,13 @@ static int __init hello_world_init(void) {
 		return result;
 }
 
-void __exit hello_world_exit(void) {
-	printk(KERN_INFO "Basic kernel removed successfully");
+void hello_world_exit(void) {
+	unregister_chrdev(memory_major, "memory");
+
+	if(memory_buffer) {
+		kfree(memory_buffer);
+	}
+	printk("<1>Basic kernel removed successfully\n");
 }
 
 module_init(hello_world_init);
